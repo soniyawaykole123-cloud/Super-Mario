@@ -19,7 +19,7 @@ kind: aws credentaials
 
 ```groovy
 pipeline {
-    agent any
+    agent { label 'agent' }
 
     tools {
         terraform 'terraform'
@@ -38,7 +38,7 @@ pipeline {
         stage('Code Pull') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/mukundDeo9325/Super-Mario.git'
+                url: 'https://github.com/soniyawaykole123-cloud/Super-Mario.git'
             }
         }
 
@@ -129,7 +129,7 @@ pipeline {
         stage('Code Pull') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/mukundDeo9325/Super-Mario.git'
+                url: 'https://github.com/soniyawaykole123-cloud/Super-Mario.git'
             }
         }
 
